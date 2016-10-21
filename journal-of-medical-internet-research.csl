@@ -245,7 +245,14 @@
       </group>
       <text macro="report-details" suffix=". "/>
       <text macro="access"/>
-      <text prefix=" PMID: " variable="PMID"/>
+      <choose>
+      <if variable="PMID">
+        <text prefix=" PMID: " variable="PMID"/>
+      </if>
+      <else>
+         <text prefix=" doi:" variable="DOI"/>
+      </else>
+      </choose>
     </layout>
   </bibliography>
 </style>
