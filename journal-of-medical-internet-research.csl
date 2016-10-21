@@ -246,6 +246,14 @@
       <text macro="report-details" suffix=". "/>
       <text macro="access"/>
       <text prefix=" PMID: " variable="PMID"/>
+    
+     <choose>
+      <if type="book">
+        <text prefix=" ISBN:" variable="ISBN"/>
+      </if>
+      </choose>
+	  
+    
     </layout>
   </bibliography>
 </style>
